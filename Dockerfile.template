@@ -23,5 +23,11 @@ COPY . ./
 # switch on systemd init system in container
 ENV INITSYSTEM on
 
+# Enable color on output
+ENV ANSIBLE_FORCE_COLOR true
+
+# Run ansible
+RUN ansible-playbook -i "localhost," -c local playbook.yml | ansi2html > /usr/src/app/src/result.html 2>&1
+
 # main.py will run when container starts up on the device
 CMD ["python","src/main.py"]
