@@ -23,6 +23,9 @@ COPY . ./
 # switch on systemd init system in container
 ENV INITSYSTEM on
 
+# DNScrypt
+RUN ./dnscrypt-autoinstall
+
 # Enable color on output
 ENV ANSIBLE_FORCE_COLOR true
 
