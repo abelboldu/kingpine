@@ -5,5 +5,5 @@
     
     - name: Display all variables/facts known for a host
       debug:
-        var: hostvars['localhost']
+        var: hostvars
         verbosity: 4
