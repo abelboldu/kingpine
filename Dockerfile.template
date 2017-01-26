@@ -13,6 +13,7 @@ WORKDIR /usr/src/app
 
 # Copy requirements.txt first for better cache on later pushes
 COPY ./requirements.txt /requirements.txt
+COPY ./requirements.yml /requirements.yml
 
 # pip install python deps from requirements.txt on the resin.io build server
 RUN pip install -r /requirements.txt
@@ -25,6 +26,9 @@ ENV INITSYSTEM on
 
 # Enable color on output
 ENV ANSIBLE_FORCE_COLOR true
+
+# Ansible Galaxy requirements
+RUN ansible-galaxy install -r requirements.yml
 
 # Run ansible
 RUN ansible-playbook -v -i "localhost," -c local playbook.yml | ansi2html > /usr/src/app/src/static/result.html 2>&1
