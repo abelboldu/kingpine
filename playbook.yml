@@ -1,8 +1,8 @@
 ---
 - hosts: all
+  roles:
+    - leanbit.netdata
   tasks:
-    - shell: echo "hello world"
-    
     - name: Display all variables/facts known for a host
       debug:
         var: hostvars
