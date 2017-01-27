@@ -2,7 +2,7 @@
 - hosts: all
   roles:
     - role: leanbit.netdata
-      netdata_version: 'v1.5.0'
+      netdata_version: 'master'
 
   tasks:
     - name: Display all variables/facts known for a host
