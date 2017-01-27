@@ -4,8 +4,3 @@
     - role: leanbit.netdata
       netdata_version: 'master'
 
-  tasks:
-    - name: Display all variables/facts known for a host
-      debug:
-        var: hostvars
-        verbosity: 4
