@@ -4,3 +4,4 @@
     - role: leanbit.netdata
       netdata_version: 'master'
 
+    - role: ricco386.rpi-dht-ansible

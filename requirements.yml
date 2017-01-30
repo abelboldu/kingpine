@@ -1,2 +1,3 @@
 # Install a role from the Ansible Galaxy
  - src: leanbit.netdata
+ - src: ricco386.rpi-dht-ansible
