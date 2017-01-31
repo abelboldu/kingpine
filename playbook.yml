@@ -1,7 +1,7 @@
 ---
 - hosts: all
   roles:
-    - role: leanbit.netdata
+    - role: netdata
       netdata_version: 'master'
 
-    - role: ricco386.rpi-dht-ansible
+    - role: rpi-dht-ansible
