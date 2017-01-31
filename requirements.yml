@@ -1,3 +1,7 @@
-# Install a role from the Ansible Galaxy
- - src: leanbit.netdata
- - src: ricco386.rpi-dht-ansible
+ - name: netdata
+   src: https://github.com/abelboldu/ansible-netdata
+   version: iot
+
+ - name: rpi-dht-ansible
+   src: ricco386.rpi-dht-ansible
+
